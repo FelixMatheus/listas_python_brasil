@@ -217,7 +217,6 @@ print "fatorial de ", numero, " = ", fatorial
 
 #Exercicio 18
 
- 
 qtyNum = input("quantos numeros deseja avaliar? ")
 soma = 0
 i = 0
@@ -236,77 +235,6 @@ while i < qtyNum:
 print "a soma dos numeros eh igual a: ", soma
 print "o maior numero eh: ", maior
 print "o menor numero eh: ", menor
-
-#===============================================================================
-# #Exercicio 16
-# 
-#  
-# termos = input("digite o numero de termos da serie ---> ")
-#  
-# soma = 0
-# fatDem = 1
-# i = 1
-# while i <= termos:
-#     soma = soma + (float(i)/fatDem)
-#     print(soma)
-#     fatDem = fatDem + 2
-#     i = i + 1
-#     
-# #Exercicio 17
-# 
-# termos = input("digite o numero de termos da serie ---> ")
-#  
-# soma = 0
-# i = 1
-# while i <= termos:
-#     soma = soma + (1/float(i))
-#     print(soma)
-#     i = i + 1
-#       
-# #Exercicio 19
-# 
-# termos = input("digite o numero de termos da serie ---> ")
-#  
-# soma = 0
-# fatNum = 1
-# i = 1
-# while i <= termos:
-#     soma = soma + (fatNum/float(i))
-#     print " + ", fatNum, "/", i, 
-#     #print(soma)
-#     fatNum = fatNum + 2
-#     i = i + 1
-# print " = ", soma
-#===============================================================================
-
-
-
-#Exercicio 25
-#===============================================================================
-# 
-# qtyNum = input("quantos numeros deseja avaliar? ---> ")
-# soma = 0
-# i = 0
-# while i < qtyNum:
-#     numero = input("digite um numero entre 0 e 65536 ---> ")
-#     while (numero < 0) or (numero > 65536):
-#         numero = input("o numero deve ser entre  0 e 65536 !!! ---> ")
-#     if i == 0:
-#         menor = numero
-#         maior = numero
-#     else:
-#         if numero > maior:
-#             maior = numero
-#         elif numero < menor:
-#             menor = numero
-#     soma = soma + numero   
-#     i = i + 1
-# print "a soma dos numeros eh igual a ---> ", soma
-# print "o maior numero eh ---> ", maior
-# print "o menor numero eh ---> ", menor
-#===============================================================================
-
-#Exercicio 19
 
 #Exercicio 20
 
@@ -442,13 +370,51 @@ while i < n:
         
 print "media de alunos por turma: ", float(media)
 
+#Exercicio 27
+
+n = input ("digite o numero de turmas: ")
+turmas = []
+soma = 0
+
+for i in range(n):
+    turmas.append(input("Quantos Alunos:\n "))
+    
+for item in turmas:
+    soma += item
+    
+media = soma / len(turmas)
+print "Media %d \n" % media
+
+#Exercicio 28
+
+n = input ("Digite Quantidade de Cds: ")
+
+valor = []
+
+for i in range(n):
+    valor.append(input("Digite o Preço de cada um: "))
+
+for item in valor:
+    soma += item
+    
+media = soma / len(valor)
+print "Media %d \n" % media
+
 #Exercicio 29
 
 i = 1
 while i < 51:
     print i, " - R$", i*1.99
     i = i + 1
-   
+
+#Exercicio 29
+
+i = 0
+for i in range(51):
+    i = i*1.99
+    if i>0:
+        print i
+
 #Exercicio 30
 
 precoPao = input("digite o preco do pao ---> ")
@@ -547,6 +513,16 @@ if i > 0:
 
 #Exercicio 34
 
+n = input ("Digite Quantos Numeros: ")
+
+for i in range(2, n):
+    if n % i == 0:
+        print n, "não é primo"
+        break
+    else:
+        print n, "é primo"
+        break
+
 #Exercicio 35
 
 #Exercicio 36
@@ -555,9 +531,9 @@ comeco = 10
 fim = 1
 tabuadaDe = 1
 while comeco >= fim:
-    tabuadaDe = input("digite o numero da tabuada que deseja visualizar (1 a 10) ---> ")
-    comeco = input("digite o numero que a tabuada deve comecar (1 a 10) ---> ")
-    fim = input("digite o numero que a tabuada deve terminar (1 a 10) ---> ")
+    tabuadaDe = input("digite o numero da tabuada que deseja visualizar (1 a 10): ")
+    comeco = input("digite o numero que a tabuada deve comecar (1 a 10): ")
+    fim = input("digite o numero que a tabuada deve terminar (1 a 10): ")
  
 print "\nMontar a tabuada de: ", tabuadaDe
 print "Comecar por: ", comeco
@@ -566,20 +542,6 @@ print "Terminar por:", fim
 while comeco < (fim+1):
     print tabuadaDe, " X ",comeco," = ", tabuadaDe*comeco
     comeco = comeco + 1
-
-
-#===============================================================================
-# i = 0
-# maiorNumero = 0
-# while i < 5:
-#     numero = input("digite um numero ---> ")
-#     if numero > maiorNumero:
-#         maiorNumero = numero
-#     else:
-#         maiorNumero = maiorNumero
-#     i = i + 1
-# print "maior numero digitado foi ---> ", maiorNumero
-#===============================================================================
 
 #Exercicio 37
 
@@ -647,9 +609,9 @@ if i != 0:
 
 #Exercicio 38
 
-anoInicial = input("digite o ano que foi contratado ---> ")
-salario = input("digite seu salario em R$ ---> ")
-anoFinal = input("digite o ultimo ano de contrato ---> ")
+anoInicial = input("digite o ano que foi contratado: ")
+salario = input("digite seu salario em R$: ")
+anoFinal = input("digite o ultimo ano de contrato: ")
 ajuste = 0.015
 anoInicial = anoInicial + 1
 i = 1
@@ -705,120 +667,7 @@ while i < 13:
     print "R$",divida," ",juros*100,"%",i,"R$",(divida/i)+(divida/i)*juros
     i = i + 3
     
-#Exercicio 40
-
-i = 0
-soma = 0
-while i < 5:
-    numero = input("digite um numero ---> ")
-    soma = soma + numero
-    i = i + 1
- 
-media = float(soma)/i
-print "soma dos numeros digitados ---> ", soma
-print "media dos numeros digitados ---> ", media
-
-
-    
-#Exercicio 43
-
-n = input("digite um numero para ter todos os primos menores que ele ---> ")
-print(1)
-print(2)
-print(3)
-primeTest = 5
-while primeTest < n:
-    i = 2
-    v = 0
-    while i < primeTest:
-        resto = primeTest%i
-        if resto == 0:
-            i = primeTest
-            v = 0
-        if resto !=0:
-            i = i + 1
-            v = 1
-    if v == 1:
-        print i
-    primeTest = primeTest + 1
-       
-#Exercicio 46
-
-anoInicial = input("digite o ano que foi contratado ---> ")
-salario = input("digite seu salario em R$ ---> ")
-anoFinal = input("digite o ultimo ano de contrato ---> ")
-ajuste = 0.015
-anoInicial = anoInicial + 1
-i = 1
- 
-while anoInicial <= anoFinal:
-    if anoInicial <= 1995 or i ==1:
-        ajuste = ajuste
-    else:
-        ajuste = ajuste*2
-    salario = salario + salario*ajuste 
-    print anoInicial, " - ajuste de -->",ajuste*100,"% -- Salario ajustado de R$",salario
-    anoInicial = anoInicial + 1
-    i = i + 1
-    
-#Exercicio 48
-
-codigoCidade = input("digite o codigo da cidade ---> ")
-qtyVeiculos = input("digite numero de veiculos da cidade ---> ")
-qtyAcidentes = input("digite numero de acidentes com vitimas da cidade ---> ")
-indiceAcidente = float(qtyAcidentes)/qtyVeiculos
-maiorIndice = indiceAcidente
-maiorIndiceCode = codigoCidade
-menorIndice = indiceAcidente
-menorIndiceCode = codigoCidade
-soma = qtyVeiculos
-somaVeiculos2000 = 0
-divisorMedia2000 = 1
-if qtyVeiculos < 2000:
-    somaVeiculos2000 = somaVeiculos2000 + qtyAcidentes
-    divisorMedia2000 = divisorMedia2000 + 1
- 
-i = 1
-while i < 3:
-    codigoCidade = input("digite o codigo da cidade ---> ")
-    qtyVeiculos = input("digite numero de veiculos da cidade ---> ")
-    qtyAcidentes = input("digite numero de acidentes com vitimas da cidade ---> ") 
-    indiceAcidente = float(qtyAcidentes)/qtyVeiculos
-    soma = soma + qtyVeiculos
- 
-    if indiceAcidente > maiorIndice:
-        maiorIndice = indiceAcidente
-        maiorIndiceCode = codigoCidade
- 
-    if indiceAcidente < menorIndice:
-        menorIndice = indiceAcidente
-        menorIndiceCode = codigoCidade
- 
-    if qtyVeiculos < 2000:
-        somaVeiculos2000 = somaVeiculos2000 + qtyAcidentes
-        divisorMedia2000 = divisorMedia2000 + 1
- 
-    i = i + 1
- 
-print "\nmenor indice ---> ", menorIndice, " -- codigo da cidade ---> ", menorIndiceCode 
-print "maior indice ---> ", maiorIndice, " -- codigo da cidade ---> ", maiorIndiceCode
-print "media de veiculos nas,",i,"cidades = ", float(soma)/i," veiculos"
-print "media de acidentes em cidades com menos de 2000 veiculos --->", float(somaVeiculos2000)/divisorMedia2000
-
-#Exercicio 49
-
-divida = float(input("\nDigite o valor da divida R$ ---> "))
-juros = 0.00
-print("Valor da Dívida##Valor dos Juros##Quantidade de Parcelas##Valor da Parcela")
-print "R$",divida,"           ",juros*100,"%          ",1,"          R$",divida
- 
-i = 3
-while i < 13:
-    juros = juros + 0.05
-    print "R$",divida,"           ",juros*100,"%          ",i,"          R$",(divida/i)+(divida/i)*juros
-    i = i + 3
-    
-#Exercicio 50
+#Exercicio 42
 
 numero = 0
 entre0e25 = 0
@@ -842,7 +691,7 @@ print entre26e50, "numeros no intervalo [26-50]"
 print entre51e75, "numeros no intervalo [51-75]"
 print entre76e100, "numeros no intervalo [76-100]"
 
-#Exercicio 51
+#Exercicio 43
 
 print "Especificação   Código  Preço"
 print "Cachorro Quente 100     R$ 1,20"
@@ -885,7 +734,7 @@ while codigo != 0:
 if soma != 0:
     print "valor total ---> R$", soma
 
-#Exercicio 52
+#Exercicio 44
 
 print "Vote de acordo com os seguintes codigos:\n\n1 - Joao \n2 - Jose \n3 - Marcos \n4 - Eneas \n5 - Voto Nulo \n6 - Voto em Branco\n ----------> digite 0 para sair"
  
@@ -1001,15 +850,4 @@ print "maior numero de acertos ---> ", maiorAcerto,"acertos"
 print "menor numero de acertos ---> ", menorAcerto,"acertos"
 print "alunos usaram o sistema ---> ",(i-1)
 print "media das notas da turma", somaMedia/(i-1)
-
-#Exercicio 54
-
-numero = input("digite um numero inteiro positivo ---> ")
-numeroStr = str(numero)
-i = len(numeroStr)
- 
-while i >= 0:
-    print numeroStr[i - 1: i],
-    i = i - 1
-
 

@@ -2,7 +2,6 @@
 # Fonte: http://www.python.org.br/wiki/ListaDeExercicios
 # Name: Matheus Felix
 
-
 #Exercicio 1
 
 vetorList = [2, 3, 5, 7, 11]
@@ -32,6 +31,15 @@ while i < len(notasList):
     i = i + 1
 print "media ---> ", soma/len(notasList)
 
+#Exercicio 3
+
+nL = [1,2,3,4,5]
+sm = 0
+for item in nL:
+    sm += item
+md = sm/len(nL)
+print "media", md
+
 #Exercicio 4
 
 letras = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"]
@@ -59,7 +67,7 @@ vetorImpar = []
 vetorPar = []
  
 while i < 20:
-    numero = input("digite um numero ---> ")
+    numero = input("digite um numero: ")
     vetor.append(numero)
     if numero%2 == 0:
         vetorPar.append (numero)
@@ -67,9 +75,9 @@ while i < 20:
         vetorImpar.append (numero)
     i = i + 1
  
-print "todos os numeros digitados ---> ", vetor
-print "vetor de numeros impares ---> ", vetorImpar
-print "vetor de numeros pares ---> ", vetorPar
+print "todos os numeros digitados: ", vetor
+print "vetor de numeros impares: ", vetorImpar
+print "vetor de numeros pares: ", vetorPar
 
 #Exercicio 6
 
@@ -80,7 +88,7 @@ while i < 20:
     e = 0
     soma = 0
     while e < 4:
-        nota = input("digite sua nota ---> ")
+        nota = input("digite sua nota: ")
         soma = soma + float(nota)
         e = e + 1
     media = soma/4
@@ -95,7 +103,7 @@ while b < len(vetorMedias):
         somaAlunos = somaAlunos + 1
     b = b + 1
  
-print "numero de alunos com  media maior que 7.0 ---> ", somaAlunos
+print "numero de alunos com  media maior que 7.0 ", somaAlunos
 
 #Exercicio 7
 
@@ -109,9 +117,9 @@ while i < len(vetorNumeros):
     multiplica = multiplica*vetorNumeros[i]
     i = i + 1
  
-print "multiplicacao dos numeros do vetor ---> ", multiplica
-print "soma dos numeros do vetor ---> ", soma
-print "vetor ---> ", vetorNumeros
+print "multiplicacao dos numeros do vetor ", multiplica
+print "soma dos numeros do vetor ", soma
+print "vetor ", vetorNumeros
 
 #Exercicio 8
 
@@ -119,16 +127,16 @@ vetorIdade = []
 vetorAltura = []
 i = 0
 while i < 5:
-    idade = input("digite sua idade ---> ")
-    altura = input("digite sua altura em metros--->")
+    idade = input("digite sua idade: ")
+    altura = input("digite sua altura em metros: ")
     vetorIdade.append(idade)
     vetorAltura.append(altura)
     i = i + 1
  
 vetorIdade.reverse()
-print "vetor idade --->", vetorIdade
+print "vetor idade ", vetorIdade
 vetorAltura.reverse()
-print "vetor altura---> ", vetorAltura
+print "vetor altura ", vetorAltura
 
 #Exercicio 9
 
@@ -139,7 +147,7 @@ while i < len(vetorNumeros):
     somaQuadrados = somaQuadrados + vetorNumeros[i]*vetorNumeros[i]
     i = i + 1
  
-print "soma dos quadrados dos elementos do vetor ---> ", somaQuadrados
+print "soma dos quadrados dos elementos do vetor: ", somaQuadrados
 
 #Exercicio 10
 
@@ -152,7 +160,7 @@ while i < len(vetorA):
     vetorC.append(vetorB[i])
     i = i + 1
  
-print "vetor resultado ---> ", vetorC
+print "vetor resultado: ", vetorC
 
 #Exercicio 11
 
@@ -168,7 +176,7 @@ while i < len(vetorA):
     vetorD.append(vetorC[i])
     i = i + 1
  
-print "vetor resultado ---> ", vetorD
+print "vetor resultado: ", vetorD
 
 #Exercicio 12
 
@@ -200,7 +208,7 @@ tempAno = []
 i = 0
 while i < 12:
     print "\nmes de "+mesesStr[i]  
-    tempMes = input("digite a temperatura do mes ---> ")
+    tempMes = input("digite a temperatura do mes: ")
     tempAno.append(tempMes)
     i = i + 1
  
@@ -212,7 +220,7 @@ while i < len(tempAno):
  
 mediaTemp = somaTemp/len(tempAno)
  
-print "\nmedia anual de temperatura ---> ", mediaTemp,"graus\nMeses com temperatura acima da media anual:"
+print "\nmedia anual de temperatura: ", mediaTemp,"graus\nMeses com temperatura acima da media anual:"
 soma = 0
 i = 0
 while i < len(tempAno):
@@ -383,45 +391,6 @@ print "Linux                   ", votosLin,"    ","    ""%(#)0.2f%%" % {"#" : po
 print "Netware                 ", votosNet,"    ","    ""%(#)0.2f%%" % {"#" : porcNet}
 print "Mac Os                  ", votosMac,"    ","    ""%(#)0.2f%%" % {"#" : porcMac}
 print "Outtros                 ", votosOut,"    ","    ""%(#)0.2f%%" % {"#" : porcOut}
-print "-----------------------------------------------------\n"
-print "Total  ", total
-
-#Exercicio 20
-
-print "Qual o melhor Sistema Operacional para uso em Servidores?\n\n"
-print "As possiveis respostas sao: \n"
-print "1- Windows XP\n2- Unix\n3- Linux\n4- Netware\n5- Mac Os\n6- Outro\nDigite 0 para sair\n"
- 
-votos = [1]
-while votos[len(votos)-1] != 0:
-    voto = input("digite seu voto ---> ")
-    votos.append(voto)
- 
-votos.pop(0)
-votos.pop(len(votos)-1)
- 
-votosWin = votos.count(1)
-votosUni = votos.count(2)
-votosLin = votos.count(3)
-votosNet = votos.count(4)
-votosMac = votos.count(5)
-votosOut = votos.count(6)
-total = votosWin + votosUni + votosLin + votosNet + votosMac + votosOut
- 
-porcWin = (float(votosWin)/(len(votos)))*100
-porcUni = (float(votosUni)/(len(votos)))*100
-porcLin = (float(votosLin)/(len(votos)))*100
-porcNet = (float(votosNet)/(len(votos)))*100
-porcMac = (float(votosMac)/(len(votos)))*100
-porcOut = (float(votosOut)/(len(votos)))*100
- 
-print "\n\nSistema Operacional     Votos      %"
-print "Windows XP              ", votosWin,"    ",porcWin,"%"
-print "Unix                    ", votosUni,"    ",porcUni,"%"
-print "Linux                   ", votosLin,"    ",porcLin,"%"
-print "Netware                 ", votosNet,"    ",porcNet,"%"
-print "Mac Os                  ", votosMac,"    ",porcMac,"%"
-print "Outtros                 ", votosOut,"    ",porcOut,"%"
 print "-----------------------------------------------------\n"
 print "Total  ", total
 
