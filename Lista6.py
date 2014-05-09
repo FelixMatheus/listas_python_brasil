@@ -52,3 +52,22 @@ i = len(nome)
 while i >= 0:
     print nome[0:i]
     i = i - 1
+
+# Exercicio 6
+
+def dataExt(data):
+    mesesStr = ["janeiro", "fevereiro", "marco", "abril", "maio", "junho", "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"]
+    dia = int(data[0:2])
+    mes = int(data[3:5])
+    ano = int(data[6:10])
+    print "Voce nasceu em",dia,"de",mesesStr[mes-1],"de",ano,"."
+ 
+i = 0
+while i == 0:
+    dataStr = raw_input("Digite uma data (DD/MM/AAAA): ")
+    dataExt(dataStr)
+    i = input("\nDigite 0 para continuar ou 1 para sair: ")
+    if i == 1:
+        print "\nAte a proxima!\n\n"
+        
+# Exercicio 7
