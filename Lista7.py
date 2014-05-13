@@ -141,6 +141,4 @@ for i in range (len(listaUsuario)):
     result += str(i+1) + "\t" + listaUsuario[i]  +  str("%.2f" %(listaEspaco[i])) + "\tMB" + "\t\t" + str("%.2f" %(listaUtilizacao[i])) + "\n"
 
 print (result)    
-    
-    
 
