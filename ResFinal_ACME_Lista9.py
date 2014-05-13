@@ -51,19 +51,13 @@ f.close()
 nr1=""
 nome1=""
 utilizado1=[]
-uso1=[]
+uso1=""
 saida=""
 n2 = input("Digite Numero de Usuários que Deseja Imprimir: ")
-uso2 = []
 for i in range(n2): 
     nr1 = raw_input("Digite o Numero: ")
     nome1 = raw_input("Digite o nome: ")
-    utilizado1.append((int(input ("Digite o Espaço Utilizado: ")/1024)/1024))
-    soma = 0
-    uso1 = 0
-    for item in utilizado1:
-        soma += item
-    
+    utilizado1.append((int(input ("Digite o Espaço Utilizado: ")/1024)/1024))  
     saida += "\n"+ str(nr1) + "\t" + str(nome1) + "\t" +  "\t" + str(utilizado1)+"MB" + "\t\t\t" + str(uso1)
 
 print saida 
