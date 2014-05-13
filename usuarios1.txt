@@ -1,0 +1,5 @@
+ACME Inc.               Uso do espaço em disco pelos usuários
+----------------------------------------------------------------
+Nr.	Usuário		Espaço utilizado	% do uso
+
+1	matheus		[99230]MB			0
