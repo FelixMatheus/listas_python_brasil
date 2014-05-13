@@ -1,5 +1,5 @@
 #coding: utf-8
-#ACME PROJETO - 3 PRIMEIROS ITENS
+#ACME PROJETO
 
 def conversao(num):
     return ((num/1024)/1024)
