@@ -71,3 +71,57 @@ while i == 0:
         print "\nAte a proxima!\n\n"
         
 # Exercicio 7
+
+string = raw_input("Digite uma frase: ")
+
+vogais = 0
+consoantes = 0
+espaco = 0
+
+for caracter in string:
+    if caracter in 'aeiou':
+        vogais = vogais + 1
+    if caracter in ' ':
+        espaco = espaco + 1
+    if not caracter in 'aeiou' and not caracter in ' ':
+        consoantes = consoantes + 1
+
+print vogais, "vogais", consoantes, "consoantes", espaco, "espaco em branco"
+
+# Exercicio 8
+
+#===============================================================================
+# Palíndromo. Um palíndromo é uma seqüência de caracteres cuja leitura é idêntica 
+# se feita da direita para esquerda ou vice−versa. Por exemplo: OSSO e OVO são palíndromos. 
+# Em textos mais complexos os espaços e pontuação são ignorados. 
+# A frase SUBI NO ONIBUS é o exemplo de uma frase palíndroma onde os espaços foram ignorados. 
+# Faça um programa que leia uma seqüência de caracteres, mostre−a e diga se é um palíndromo ou não.
+#===============================================================================
+
+# Exercicio 11
+#===============================================================================
+# Jogo de Forca. Desenvolva um jogo da forca. 
+# O programa terá uma lista de palavras lidas de um arquivo texto e escolherá uma aleatoriamente. 
+# O jogador poderá errar 6 vezes antes de ser enforcado.
+# 
+# Digite uma letra: A
+# -> Você errou pela 1ª vez. Tente de novo!
+# 
+# Digite uma letra: O
+# A palavra é: _ _ _ _ O
+# 
+# Digite uma letra: E
+# A palavra é: _ E _ _ O
+# 
+# Digite uma letra: S
+# -> Você errou pela 2ª vez. Tente de novo!
+#===============================================================================
+
+f=open("palavras.txt","r")
+lista = f.readlines()
+f.close()
+
+palavra = []
+
+for i in lista:
+    palavra.append(i)

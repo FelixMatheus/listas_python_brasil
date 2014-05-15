@@ -2,4 +2,4 @@ ACME Inc.               Uso do espaço em disco pelos usuários
 ----------------------------------------------------------------
 Nr.	Usuário		Espaço utilizado	% do uso
 
-1	matheus		[4]MB			
+1	matheus		[47]MB			
