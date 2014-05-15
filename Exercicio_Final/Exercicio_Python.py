@@ -10,25 +10,28 @@ class bbb:
     dataInicio = None #começa num domingo
     duracao = None #duracao em semanas do programa
     grupo = None
+    lado = None
     
-    def __init__(self, nome, cidade, idade, estalecas, grupo):
+    def __init__(self, nome, cidade, idade, estalecas, grupo, lado):
         self.nome = nome
         self.cidade = cidade
         self.idade = idade
         self.estalecas = estalecas
         self.grupo = grupo
+        self.lado = lado
               
     def inscreveParticipante(self):
-        return self.nome, self.cidade, self.idade, self.estalecas, self.grupo
+        return self.nome, self.cidade, self.idade, self.estalecas, self.grupo, self.lado
         
     def apresentaParticipante(self):
-        print self.nome, self.cidade, self.idade, self.estalecas, self.grupo
+        print self.nome, self.cidade, self.idade, self.estalecas, self.grupo, self.lado
                     
 class Apresentacao(object):
     n = 4 #Numero de Participantes
     apresentador = raw_input("Digite o Nome do Apresentador: ")
     i = 0
     grupo = ""
+    lado = ""
     listaParticipante = []
     dataInicio = "2014-01-05"
     dataInicio = time.strptime(dataInicio, "%Y-%m-%d")
@@ -39,11 +42,11 @@ class Apresentacao(object):
         nome = raw_input("Digite um nome: ")
         cidade = raw_input("Digite uma cidade: ")
         idade = int(input("Digite uma idade: "))
-        estalecas = 0
-        participante = bbb(nome, cidade, idade, estalecas, grupo)
+        estalecas = 0 #Estalecas Iniciais
+        participante = bbb(nome, cidade, idade, estalecas, grupo, lado)
         participante.inscreveParticipante()
         participante.apresentaParticipante()
-        part = [participante.nome, participante.cidade, participante.idade, participante.estalecas, participante.grupo]
+        part = [participante.nome, participante.cidade, participante.idade, participante.estalecas, participante.grupo, participante.lado]
         listaParticipante.append(part)
 
    

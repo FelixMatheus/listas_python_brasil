@@ -2,6 +2,7 @@
 
 from Exercicio_Python import Apresentacao
 from ProvaDinheiro import ProvaDinheiro
+
 import random
 
 class ProvaCompra(object):

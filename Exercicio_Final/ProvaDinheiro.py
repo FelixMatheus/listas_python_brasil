@@ -1,6 +1,7 @@
 #coding: utf-8
 
 from Exercicio_Python import Apresentacao
+
 import random
 
 class ProvaDinheiro(object):
