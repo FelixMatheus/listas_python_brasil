@@ -51,8 +51,8 @@ class Eventos:
         
     def bigFone(self, week, listaParticipante):
         quem_atende = ""
-        premio = ""
-        prenda = ""
+        premio1 = ""
+        prenda1 = ""
         BigFone = ""
         eae = ""
         missoes = ['[Coma Todo Cafe da manha]', '[Nao Tome Café]', '[Malhe Semana Inteira]', '[Pule na Piscina]']
@@ -63,20 +63,20 @@ class Eventos:
             BigFone = random.choice(missoes)
             quem_atende = random.choice(listaParticipante)
             eae = random.choice(validacao)
-            premio = random.choice(premio)
-            prenda = random.choice(prenda)
+            premio1 = random.choice(premio)
+            prenda1 = random.choice(prenda)
             print "\nMissão do Big Fone -> ", BigFone 
             print "Quem Atendeu? -> ", quem_atende
             print "Efetuou a Missão? ->", eae, "\n"
             
             while eae == True:
-                print "Parabens Você Ganhou um Prêmio!\n"
-                print premio
+                print "Parabens Você Ganhou um Prêmio!"
+                print premio1, "\n"
                 break
                   
             while eae == False:
-                print "Você será Obrigado a Pagar uma Prenda!\n"
-                print prenda
+                print "Você será Obrigado a Pagar uma Prenda!"
+                print prenda1, "\n"
                 break
             
         return BigFone, quem_atende, eae
