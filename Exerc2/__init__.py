@@ -1,2 +1,5 @@
-import Exerc2
+import A
+import B
+import C
+import D
 import Exerc3
