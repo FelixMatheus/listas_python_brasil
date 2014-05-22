@@ -2,7 +2,7 @@
 import math
 
 class A:
-    a1 = ""
+    a1 = 'Rafael'
     def __init__(self, a1):
         self.a1 = a1
     def getA1(self):
@@ -99,6 +99,15 @@ class D:
     for a in multiA:
         s+= a.getB()+C.bbbb()
     
+#Exercicio 3:
+
+class App(object):
+
+    def main(self):
+        D.d1t.append(A.a1)
+        return D.d1t
+    print main(D.d1t)
+
 #agregação de A com B
 
 #herança de B para C
