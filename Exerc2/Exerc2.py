@@ -101,7 +101,7 @@ class D:
     
 #Exercicio 3:
 
-class App(object):
+class App:
 
     def main(self):
         D.d1t.append(A.a1)
