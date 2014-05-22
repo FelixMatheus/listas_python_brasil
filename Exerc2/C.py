@@ -2,7 +2,7 @@
 
 from B import *
 
-class C(B):
+class C:
     def __init__(self, c1):
         self.c1 = c1
     def getC1(self):
