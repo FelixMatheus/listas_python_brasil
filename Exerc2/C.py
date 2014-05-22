@@ -1,6 +1,6 @@
 #coding: utf-8
 
-from B import *
+import B
 
 class C:
     def __init__(self, c1):

@@ -1,9 +1,9 @@
 #coding: utf-8
 
-from B import *
+import B
 
 class A:
-    b = B(1)
+
     def __init__(self, a1):
         self.a1 = a1
     def getA1(self):

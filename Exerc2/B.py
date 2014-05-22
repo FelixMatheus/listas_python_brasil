@@ -1,7 +1,7 @@
 #coding: utf-8
 import math
 from itertools import cycle
-from C import *
+import C
 
 class B:
     index = []
