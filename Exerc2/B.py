@@ -1,9 +1,8 @@
 #coding: utf-8
 import math
 from itertools import cycle
-import C
 
-class B:
+class B(object):
     index = []
     bb = 203034.23
     def __init__(self, b1=False, newb=False):
@@ -24,9 +23,4 @@ class B:
         if b:
             return True
         else:
-            return False 
-    def bbbbb(self):
-        if not (B.getproximoB) == 0:
-            return str(C.c1) + str(B.bbbbb)
-        else:
-            return str(C.c1)
+            return False

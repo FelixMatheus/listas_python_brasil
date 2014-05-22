@@ -1,8 +1,10 @@
 #coding: utf-8
 
-import A, C
+from A import *
+from C import *
+
 from itertools import cycle
-class D:
+class D(C):
 
     a = 1
     s =""

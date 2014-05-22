@@ -6,8 +6,8 @@ from A import *
 
 print "Exercicio 3"   
 def main():
-        D.d1t.append(A.a1)
-        return D.d1t
+        D.multiA.append(A.a1)
+        return D.multiA
 
 if  __name__ =='__main__':
-    print main()
+    main()

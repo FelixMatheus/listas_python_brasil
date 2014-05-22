@@ -1,9 +1,11 @@
 #coding: utf-8
 
-import B
+from B import *
 
-class C:
+class C(B):
+
     def __init__(self, c1):
+        B.__init__(self, b1=False, newb=False)
         self.c1 = c1
     def getC1(self):
         return self.c1
@@ -16,3 +18,4 @@ class C:
             return str(C.c1) + str(B.bbbbb)
         else:
             return str(C.c1)
+        
