@@ -1,11 +1,8 @@
 #coding utf-8
-from Exerc2 import *
+from D import *
+from A import *
 
 #Exercicio 3:
-
-class App:
-    def __init__(self):
-        pass
 
 print "Exercicio 3"   
 def main():
