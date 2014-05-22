@@ -1,6 +1,7 @@
 #coding: utf-8
 import math
 from itertools import cycle
+from C import *
 
 class B:
     index = []
@@ -24,3 +25,8 @@ class B:
             return True
         else:
             return False 
+    def bbbbb(self):
+        if not (B.getproximoB) == 0:
+            return str(C.c1) + str(B.bbbbb)
+        else:
+            return str(C.c1)

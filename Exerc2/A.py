@@ -1,3 +1,4 @@
+#coding: utf-8
 from B import *
 
 class A:

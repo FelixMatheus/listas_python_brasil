@@ -1,3 +1,5 @@
+#coding: utf-8
+
 from C import *
 
 class D:
@@ -34,3 +36,4 @@ class D:
         for a in multiA:
             s+= a.getB()+C.bbbbb()
         return s
+
