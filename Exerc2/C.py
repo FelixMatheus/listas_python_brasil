@@ -15,7 +15,7 @@ class C(B):
         return self.d1
     def bbbbb(self):
         if not (B.getproximoB) == 0:
-            return str(C.c1) + str(B.bbbbb)
+            return str(C.c1) + str(C.bbbbb)
         else:
             return str(C.c1)
         
